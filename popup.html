@@ -24,12 +24,12 @@
 
 <body>
     <div>
-        <p id="name"><b>No Fish?</b></p>
+        <p id="name"><b>No Fish</b></p>
         <style>
             #name {
             display: block;
             font-family: Courier;
-            font-size: 100px; 
+            font-size: 70px; 
             color: #000000;
             margin-top: 180px;
             border-radius:5px;
@@ -42,20 +42,21 @@
         <button class="button" id="scrapeEmails">Check email?</button>
             <style>
                 #scrapeEmails {
-                    width:300px;
-                    height:100px;
-                    font-size:30px;
+                    width:200px;
+                    height:60px;
+                    font-size:23px;
                     margin-top:-60px;
                     border-radius:10px;
                     background-color:#10629E;
             }
             </style>
+    <script src="script.js"></script>
     </div>
     <hr id="line">
         <style>
             hr {
                 border:5px solid #000000;
-                margin: 35px  0; 
+                margin: 30px  0; 
                 border-radius: 5px;
                 width: 450px;
             }
@@ -66,71 +67,41 @@
             input[type="text"] {
                 width: 300px;
                 padding: 10px; 
-                font-size: 16px; 
+                font-size: 14px; 
                 border: 3px solid #10629E; 
                 border-radius: 5px; 
                 box-sizing: border-box;
-                padding:10px;
+                padding:8px;
                 resize: none;
                 font-family: Courier; 
             }
         </style>
     </div>
-    <div>
-        <img id="loading" src="https://i.pinimg.com/originals/6b/e0/89/6be0890f52e31d35d840d4fe2e10385b.gif" alt="Animated Image">
-            <style>
-                #loading {
-                display: none;
-               }
-            </style>
-    </div>
-    <div id="results"> 
-        <p>results</p>
+    <div> 
+        <p id="results">results</p>
         <style>
             #results { 
-                display: none;
+                display: block;
+                color: #FFFFFF;
+                background-color: #10629E;
+                border-radius: 5px;
+                padding:5px;
+                font-size: 20px;
+                margin-top:20px;
+                font-family: courier;
+                
             }
         </style>
+    </div>
 </body>
 
 <script>
-    // shows the image
-    function showImage() {
-        var image = document.getElementById('loading');
-        image.style.display = 'block';
-    }
-    function hideText() {
-    // hides inital text
-        var text = document.getElementById('name');
-        text.style.display = 'none';
-    }
-    function hideButton() {
-    // hides button 
-        var but = document.getElementById('scrapeEmails');
-        but.style.display = 'none'
-    }
-    function hideBox() {
-    // hides input box
-        var box = document.getElementById('manual');
-        box.style.display = 'none';
-    }
-    function showResults() { 
-    // shows results of prediction
-        var output = document.getElementById('results');
-        output.style.display = 'block'
-    }
-    function hideLine() { 
-    // hides horizontal line
-        var horizontal = document.getElementById('line');
-        horizontal.style.display = 'hide'
-    }
     // event listener for button
-    var button = document.getElementById('scrapeEmails');
-    button.addEventListener('click', function() {
-        hideText();
-        showImage();
-        hideButton();
-        hideBox();
-        hideLine(); 
+    document.addEventListener('DOMContentLoaded', function() {
+        var run = document.getElementById('scrapeEmails');
+        var change = document.getElementById('results')
+        run.addEventListener('click', function() {
+            change.innerText = 'Worked!';
+        });
     });
 </script>
