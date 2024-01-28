@@ -1,0 +1,18 @@
+@import url(https://fonts.googleapis.com/css?family=MuseoModerno);
+
+body {
+    .button{
+        background-color: #500000;
+        height: 500 px;
+        width: 1000 px;
+        color:white;
+        font-family: 'MuseoModerno', serif;
+        font-size: 100 px;
+    }
+    .top{
+        font-family: 'MuseoModerno', serif;
+        font-size: 1000 px;
+        color: #500000
+    }
+}
+
