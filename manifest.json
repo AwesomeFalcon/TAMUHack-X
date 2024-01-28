@@ -1,10 +1,14 @@
 {
-    "manifest_version" : 3,
-    "name" : "Fishing",
-    "version" : "1.0",
-    "description" : "No phising",
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "permissions": ["activeTab", "scripting"]
+  "manifest_version": 3,
+  "name": "Fishing",
+  "version": "1.0",
+  "description": "No phising",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "scripting"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';"
+  },
+  "web_accessible_resources": ["libs/tf.min.js"]
 }

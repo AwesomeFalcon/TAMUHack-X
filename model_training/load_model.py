@@ -4,7 +4,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 import json
 
 # Load the saved model
-loaded_model = tf.keras.models.load_model('my_model.h5')
+loaded_model = tf.keras.models.load_model('model_training/my_model.h5')
 
 # Tokenize and preprocess the input text
 def preprocess_input_text(text, tokenizer, max_sequence_length):
